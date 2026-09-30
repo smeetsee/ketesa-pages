@@ -24,19 +24,16 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y curl wget tar
 
       # Download and extract the release
-      - name: Download and extract Element Web
+      - name: Download and extract Ketesa
         run: |
           source version.env
-          wget https://github.com/element-hq/element-web/releases/download/${VERSION}/element-${VERSION}.tar.gz
-          tar zfx element-${VERSION}.tar.gz
-          mv element-${VERSION} public
+          wget https://github.com/etkecc/ketesa/releases/download/${VERSION}/ketesa.tar.gz
+          tar zfx ketesa.tar.gz
+          mv ketesa public
 
-      # Move additional files to the public directory
-      - name: Move additional files
+      - name: Move config.json
         run: |
           mv config.json public
-          mv background.jpeg public
-          mv default.svg public
 
       # Upload the public directory as an artifact
       - name: Upload artifact for GitHub Pages

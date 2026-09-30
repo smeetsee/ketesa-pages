@@ -10,7 +10,7 @@
       "matchStrings": [
         "^VERSION=v(?<currentValue>[^\\r\\n]+)$"
       ],
-      "depNameTemplate": "element-hq/element-web",
+      "depNameTemplate": "etkecc/ketesa",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^(?<version>.*)$"
     }
